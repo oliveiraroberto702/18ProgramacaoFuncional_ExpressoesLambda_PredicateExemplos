@@ -19,7 +19,7 @@ public class Programa {
 		lista.add(new Produto("Tablet", 450.00));
 		lista.add(new Produto("HD Case", 80.90));
 
-		lista.removeIf(new ProdutoPredicado());
+		lista.removeIf(Produto::staticProdutoPredicado);
 
 		for (Produto p : lista) {
 			System.out.println(p);

@@ -22,14 +22,15 @@ public class Produto {
 	public void setPreco(Double preco) {
 		this.preco = preco;
 	}
+	public static boolean staticProdutoPredicado(Produto p) {
+		return p.getPreco()>=100.00;
+	}
 	@Override
 	public String toString() {
 		return nome
 				+ ", "
 				+ String.format("%.2f",  preco);
 	}
-	
-	
-	
+		
 
 }
