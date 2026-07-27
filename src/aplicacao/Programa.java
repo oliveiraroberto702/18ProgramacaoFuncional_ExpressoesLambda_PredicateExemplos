@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Locale;
 
 import entidades.Produto;
+import util.ProdutoPredicado;
 
 public class Programa {
 
@@ -18,7 +19,7 @@ public class Programa {
 		lista.add(new Produto("Tablet", 450.00));
 		lista.add(new Produto("HD Case", 80.90));
 
-		lista.removeIf(p -> p.getPreco() > 100.00);
+		lista.removeIf(new ProdutoPredicado());
 
 		for (Produto p : lista) {
 			System.out.println(p);
