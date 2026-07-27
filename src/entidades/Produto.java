@@ -25,6 +25,9 @@ public class Produto {
 	public static boolean staticProdutoPredicado(Produto p) {
 		return p.getPreco()>=100.00;
 	}
+	public boolean no_staticProdutoPredicado() {
+		return preco>=100.00;
+	}
 	@Override
 	public String toString() {
 		return nome
