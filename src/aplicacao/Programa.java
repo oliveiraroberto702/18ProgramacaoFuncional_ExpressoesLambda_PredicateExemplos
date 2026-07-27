@@ -19,8 +19,9 @@ public class Programa {
 		lista.add(new Produto("Tablet", 450.00));
 		lista.add(new Produto("HD Case", 80.90));
 
-		Predicate<Produto> pred = p -> p.getPreco()>=100.00;
-		lista.removeIf(pred);
+		double min = 100.00;
+		
+		lista.removeIf(p -> p.getPreco()>=min);
 		
 
 		for (Produto p : lista) {
